@@ -14,7 +14,7 @@ object RabbitConsumerActor {
 
 class RabbitConsumerActor extends Actor with ActorLogging {
   def receive = {
-    case x => log.info("received: " + x)
+    case x:String => log.info("received: " + x)
     case _ => log.info("received unknown message")
   }
 }
