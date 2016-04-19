@@ -21,4 +21,13 @@ git clone https://github.com/makersu/reactive-rabbit-example.git
 sbt run
 ```
 
+## consume with actor
+```
+  val queue = connection.consume(queue = "messages")
 
+  val rabbitConsumerActor = system.actorOf(RabbitConsumerActor.props, "RabbitConsumerActor")
+
+  Source.fromPublisher(queue)
+    .map(msg => ByteString.fromArray(msg.message.body.toArray).utf8String)
+    .runWith(Sink.actorRef(rabbitConsumerActor, () => println("finished")))
+```
