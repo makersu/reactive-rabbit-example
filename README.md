@@ -15,9 +15,9 @@ libraryDependencies += "io.scalac" %% "reactive-rabbit" % "1.1.0"
 ...
 ```
 
-## producer with actor(TODO)
+## produce by actor(TODO)
 
-## consume with actor
+## consume by actor
 ```
 ...
   val queue = connection.consume(queue = "messages")
