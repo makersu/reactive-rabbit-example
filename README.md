@@ -15,6 +15,17 @@ libraryDependencies += "io.scalac" %% "reactive-rabbit" % "1.1.0"
 ...
 ```
 
+## application.conf
+```
+amqp {
+  addresses = [
+    { host = "localhost", port = 5672 }
+  ],
+  username = "guest",
+  password = "guest"
+}
+```
+
 ## produce by actor(TODO)
 
 ## consume by actor
