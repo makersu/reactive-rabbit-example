@@ -15,6 +15,8 @@ libraryDependencies += "io.scalac" %% "reactive-rabbit" % "1.1.0"
 ...
 ```
 
+## producer with actor(TODO)
+
 ## consume with actor
 ```
 ...
